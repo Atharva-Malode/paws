@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paws/auth/auth_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //added new file
-      home: Text('Flutter Demo Home Page'),
+      //home: Text('Flutter Demo Home Page'),
+      home: AuthPage(),
     );
   }
 }
