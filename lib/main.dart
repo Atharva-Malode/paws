@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paws/auth/auth_page.dart';
+import 'package:paws/pages/log_in_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       ),
       //added new file
       //home: Text('Flutter Demo Home Page'),
-      home: AuthPage(),
+      home: LoginScreen(),
     );
   }
 }
