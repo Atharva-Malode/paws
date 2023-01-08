@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:paws/auth/auth_page.dart';
 import 'package:paws/pages/log_in_screen.dart';
 import 'package:paws/pages/main_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -20,7 +23,7 @@ class MyApp extends StatelessWidget {
       //added new file
       //home: Text('Flutter Demo Home Page'),
       debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+      home: Main_Page(),
     );
   }
 }
