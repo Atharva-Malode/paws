@@ -1,13 +1,13 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:paws/pages/Home_Page.dart';
+import 'package:paws/pages/register_page.dart';
 
 class LoginScreen extends StatefulWidget {
   final VoidCallback showRegisterPage;
-  const LoginScreen({super.key, required this.showRegisterPage});
+  const LoginScreen({Key? key, required this.showRegisterPage})
+      : super(key: key);
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -131,7 +131,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontWeight: FontWeight.bold,
                             fontSize: 15)),
                     GestureDetector(
-                      onTap: Widget.showRegisterPage,
+                      onTap: widget.showRegisterPage,
                       child: Text('Register Now',
                           style: TextStyle(
                               color: Colors.blue,
