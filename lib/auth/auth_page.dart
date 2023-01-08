@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paws/pages/log_in_screen.dart';
 
 import '../pages/register_page.dart';
 
@@ -19,13 +20,12 @@ class _AuthPageState extends State<AuthPage> {
 
   @override
   Widget build(BuildContext context) {
-    //if (showLoginPage) {
-    //  return LoginPage( showRegisterPage: toggleScreens,);
-    //} else {
-    //  return RegisterPage(showLoginPage: toggleScreens,);
-    //}
-    return RegisterPage(
-      showLoginPage: toggleScreens,
-    );
+    if (showLoginPage) {
+      return LoginScreen();
+    } else {
+      return RegisterPage(
+        showLoginPage: toggleScreens,
+      );
+    }
   }
 }
