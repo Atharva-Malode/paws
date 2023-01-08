@@ -6,7 +6,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:paws/pages/Home_Page.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+  final VoidCallback showRegisterPage;
+  const LoginScreen({super.key, required this.showRegisterPage});
 
   @override
   State<LoginScreen> createState() => _LoginScreenState();
@@ -129,11 +130,14 @@ class _LoginScreenState extends State<LoginScreen> {
                             // color: Colors.blue,
                             fontWeight: FontWeight.bold,
                             fontSize: 15)),
-                    Text('Register Now',
-                        style: TextStyle(
-                            color: Colors.blue,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15))
+                    GestureDetector(
+                      onTap: Widget.showRegisterPage,
+                      child: Text('Register Now',
+                          style: TextStyle(
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15)),
+                    )
                   ],
                 ),
               ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:paws/auth/auth_page.dart';
 import 'package:paws/pages/log_in_screen.dart';
-import 'package:paws/pages/main_page.dart';
+import 'package:paws/auth/main_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       //added new file
       //home: Text('Flutter Demo Home Page'),
       debugShowCheckedModeBanner: false,
-      home: Main_Page(),
+      home: AuthPage(),
     );
   }
 }
