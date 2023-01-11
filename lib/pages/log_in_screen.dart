@@ -6,9 +6,7 @@ import 'package:paws/pages/register_page.dart';
 
 class LoginScreen extends StatefulWidget {
   final VoidCallback showRegisterPage;
-  const LoginScreen({Key? key, required this.showRegisterPage})
-      : super(key: key);
-
+  const LoginScreen({super.key, required this.showRegisterPage});
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }

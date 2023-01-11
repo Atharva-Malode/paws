@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       //added new file
       //home: Text('Flutter Demo Home Page'),
       debugShowCheckedModeBanner: false,
-      home: AuthPage(),
+      home: Main_Page(),
     );
   }
 }
