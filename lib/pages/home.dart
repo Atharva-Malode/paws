@@ -1,8 +1,8 @@
 // ignore_for_file:  prefer_interpolation_to_compose_strings, avoid_print,prefer_const_literals_to_create_immutables,prefer_const_constructors,unused_import
 import 'package:flutter/material.dart';
 
-import '../utility.dart/post.dart';
-import '../utility.dart/stories.dart';
+import '../utility/post.dart';
+import '../utility/stories.dart';
 
 class UserHome extends StatelessWidget {
   //const UserHome({super.key});
