@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       //added new file
       //home: Text('Flutter Demo Home Page'),
       debugShowCheckedModeBanner: false,
-      home: Main_Page(),
+      home: const Main_Page(),
     );
   }
 }

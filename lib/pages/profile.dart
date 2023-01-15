@@ -1,4 +1,5 @@
 // ignore_for_file:  prefer_interpolation_to_compose_strings, avoid_print,prefer_const_literals_to_create_immutables,prefer_const_constructors,unused_import
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../utility/account_tab1.dart';
@@ -152,6 +153,16 @@ class UserProfile extends StatelessWidget {
                 ],
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+                child: GestureDetector(
+                    onTap: () => FirebaseAuth.instance.signOut(),
+                    child: Text(
+                      'Log Out',
+                      style: TextStyle(fontSize: 20),
+                    ))),
           ],
         ),
       ),
