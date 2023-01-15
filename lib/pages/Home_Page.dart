@@ -1,6 +1,6 @@
 // ignore_for_file:  prefer_interpolation_to_compose_strings, avoid_print,prefer_const_literals_to_create_immutables,prefer_const_constructors,unused_import
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:paws/pages/profile.dart';
 import 'package:paws/pages/search.dart';
 import 'package:paws/pages/shops.dart';
@@ -17,6 +17,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final user = FirebaseAuth.instance.currentUser;
   int _selectedIndex = 0;
+
   void _navigateToPage(int index) {
     setState(() {
       _selectedIndex = index;
@@ -34,6 +35,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[900],
+      body: IndexedStack(
+        index: _selectedIndex,
+        children: _children,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         onTap: _navigateToPage,
