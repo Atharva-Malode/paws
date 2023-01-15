@@ -69,6 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Email',
+                          hintStyle: TextStyle(color: Colors.grey[600]),
                           contentPadding: EdgeInsets.all(10.0)),
                     ),
                   ),
@@ -89,6 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       decoration: InputDecoration(
                           border: InputBorder.none,
                           hintText: 'Password',
+                          hintStyle: TextStyle(color: Colors.grey[600]),
                           contentPadding: EdgeInsets.all(10.0)),
                     ),
                   ),
