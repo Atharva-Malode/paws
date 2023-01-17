@@ -4,6 +4,7 @@ import 'package:paws/pages/Home_Page.dart';
 import 'package:paws/pages/log_in_screen.dart';
 import 'package:paws/auth/main_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:paws/pages/register_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

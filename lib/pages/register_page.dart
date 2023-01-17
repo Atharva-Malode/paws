@@ -17,11 +17,15 @@ class _RegisterPageState extends State<RegisterPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmpasswordController = TextEditingController();
+  final _biocontroller = TextEditingController();
+  final _usernameController = TextEditingController();
   @override
   void dispose() {
     _emailController.dispose();
     _passwordController.dispose();
     _confirmpasswordController.dispose();
+    _biocontroller.dispose();
+    _usernameController.dispose();
     super.dispose();
   }
 
@@ -78,6 +82,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  //textfield to enter email
                   child: TextField(
                     controller: _emailController,
                     decoration: InputDecoration(
@@ -94,6 +99,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 SizedBox(
                   height: 10,
                 ),
+                //textfield to enter username
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: TextField(
@@ -113,6 +119,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 SizedBox(
                   height: 10,
                 ),
+                //textfield to confirm password
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
                   child: TextField(
