@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class RegisterPage extends StatefulWidget {
   final VoidCallback showLoginPage;
@@ -31,10 +32,22 @@ class _RegisterPageState extends State<RegisterPage> {
 
   Future signUp() async {
     if (passwordConfirmed()) {
+      //create user
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: _emailController.text.trim(),
           password: _passwordController.text.trim());
+      //add user details
+      addUserDetails(_emailController.text.trim(), _biocontroller.text.trim(),
+          _usernameController.text.trim());
     }
+  }
+
+  Future addUserDetails(String Email, String Bio, String Username) async {
+    await FirebaseFirestore.instance.collection('users').add({
+      'bio': Bio,
+      'email': Email,
+      'username': Username,
+    });
   }
 
   bool passwordConfirmed() {
