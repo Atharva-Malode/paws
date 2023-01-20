@@ -50,7 +50,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.black,
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -62,23 +62,43 @@ class _RegisterPageState extends State<RegisterPage> {
                   size: 100,
                 ),
                 SizedBox(
-                  height: 75,
+                  height: 10,
                 ),
-                Text(
-                  'Hey There',
-                  style: GoogleFonts.bebasNeue(
-                    fontSize: 52,
+                Stack(
+                  children: [
+                    CircleAvatar(
+                      foregroundColor: Colors.deepPurple,
+                      radius: 64,
+                    ),
+                    Positioned(
+                        bottom: -10,
+                        left: 80,
+                        child: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.add_a_photo)))
+                  ],
+                ),
+                SizedBox(
+                  height: 50,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  //textfield to enter email
+                  child: TextField(
+                    controller: _usernameController,
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.deepPurple),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      hintText: 'Enter your username',
+                      fillColor: Colors.grey[900],
+                      filled: true,
+                    ),
                   ),
                 ),
                 SizedBox(
                   height: 10,
-                ),
-                Text('Sign up to get started',
-                    style: TextStyle(
-                      fontSize: 18,
-                    )),
-                SizedBox(
-                  height: 50,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -90,8 +110,8 @@ class _RegisterPageState extends State<RegisterPage> {
                         borderSide: BorderSide(color: Colors.deepPurple),
                         borderRadius: BorderRadius.circular(12),
                       ),
-                      hintText: 'Email',
-                      fillColor: Colors.grey[200],
+                      hintText: 'Enter your email',
+                      fillColor: Colors.grey[900],
                       filled: true,
                     ),
                   ),
@@ -111,7 +131,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       hintText: 'passowrd',
-                      fillColor: Colors.grey[200],
+                      fillColor: Colors.grey[900],
                       filled: true,
                     ),
                   ),
@@ -131,13 +151,32 @@ class _RegisterPageState extends State<RegisterPage> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       hintText: 'Confirm Passowrd',
-                      fillColor: Colors.grey[200],
+                      fillColor: Colors.grey[900],
                       filled: true,
                     ),
                   ),
                 ),
                 SizedBox(
                   height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: TextField(
+                    obscureText: true,
+                    controller: _biocontroller,
+                    decoration: InputDecoration(
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.deepPurple),
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      hintText: 'Enter your bio',
+                      fillColor: Colors.grey[900],
+                      filled: true,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 25,
                 ),
                 Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25.0),
